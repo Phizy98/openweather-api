@@ -2,6 +2,7 @@ package edu.astakhov.weather;
 
 import edu.astakhov.DTO.WeatherResponse;
 import edu.astakhov.exception.WeatherApiException;
+import lombok.Getter;
 
 import java.util.Set;
 import java.util.concurrent.*;
@@ -9,6 +10,7 @@ import java.util.concurrent.*;
 public class WeatherClient implements AutoCloseable {
     private final String token;
     private final Mode mode;
+    @Getter
     private static final Set<String> tokens = ConcurrentHashMap.newKeySet();
     private static final WeatherService apiService = new WeatherService();
     private final WeatherDataCache cache = new WeatherDataCache();
@@ -51,4 +53,5 @@ public class WeatherClient implements AutoCloseable {
         tokens.remove(this.token);
         pollingService.stop();
     }
+
 }

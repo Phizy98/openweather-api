@@ -17,8 +17,8 @@ A simple SDK for accessing the OpenWeather API to retrieve current weather data 
 To use the SDK, you must have a Java environment (JDK 11 or higher). Clone this repository and build the project using Maven:
 
 ```bash
-git clone https://github.com/yourusername/weather-sdk.git
-cd weather-sdk
+git clone https://github.com/Phizy98/openweather-api.git
+cd openweather-api
 mvn clean install
 ```
 ## Usage Example

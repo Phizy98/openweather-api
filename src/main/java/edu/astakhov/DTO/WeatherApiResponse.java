@@ -3,6 +3,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
+/**
+ * A response from the weather API containing detailed weather data.
+ * This record is used to deserialize the JSON response from the API.
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record WeatherApiResponse(
         List<Weather> weather,

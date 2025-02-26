@@ -1,6 +1,11 @@
 package edu.astakhov.DTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * A response from the weather application containing processed weather data.
+ * This record represents the data after the application processes the raw API response
+ * and organizes it in a more usable format.
+ */
 public record WeatherResponse(
         Weather weather,
         Temperature temperature,
